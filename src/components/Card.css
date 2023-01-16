@@ -1,0 +1,52 @@
+.card-container {
+    background-color: aliceblue;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    box-shadow: .1em .1em 4rem black;
+}
+
+.card-container #cidade {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: black;
+}
+
+.card-container #pais {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: grey;
+}
+
+.card-container .temperaturaInfo {
+    display: flex;
+    margin-top: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container #temperatura {
+    font-size: 7.5rem;
+    font-weight: 900;
+}
+
+.card-container #celsius {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2.7rem;
+}
+
+.card-container .climaInfo {
+    text-align: center;
+    margin-top: .7rem;
+}
+
+.card-container #icone {
+    display: block;
+}
+
+.card-container #clima {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
