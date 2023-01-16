@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 
 class App extends Component {
   render() {
-    return <h1>Hello React World</h1>
+    return (
+      <div class='container'>
+
+        <form>
+          <input type='text' placeholder='Cidade' />
+          <button type='submit'>Pesquisar</button>
+        </form>
+
+      </div>
+    )
   }
 }
 
