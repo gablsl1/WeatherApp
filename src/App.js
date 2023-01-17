@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import Card from './components/Card'
 import Api from './services/api'
+import initialData from './helpers/initialData'
 
 function App() {
 
+  console.log(initialData)
+
   const [cidade, setCidade] = useState('')
+  const [data, setData] = useState(initialData)
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
     Api(cidade).then((res) => {
-      console.log(res)
+      setData(res)
     }) 
   }
 
@@ -22,7 +26,7 @@ function App() {
         <button type='submit'>Pesquisar</button>
       </form>
 
-      <Card />
+      <Card data={data}/>
     </div>
   )  
 }

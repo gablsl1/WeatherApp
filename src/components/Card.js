@@ -1,23 +1,30 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import './Card.css'
 
-function Card() {
+function Card({ data }) {
+
+    const {
+        location,
+        current,
+    } = data
+
     return (
         <div class='card-container'>
 
             <div>
-                <span id='cidade'>Distrito Federal</span>
-                <span id='pais'>Brasília, Brasil</span>
+                <span id='cidade'>{location.name}</span>
+                <span id='pais'>{`${location.region}, ${location.country}`}</span>
             </div>
 
             <div class='temperaturaInfo'>
-                <span id='temperatura'>27</span>
+                <span id='temperatura'>{current.temp_c}</span>
                 <span id='celsius'>°C</span>
             </div>
 
             <div class='climaInfo'>
-                <span id='icone'>Icone</span>
-                <span id='clima'>Nublado</span>
+                <img id='icone' src={current.condition.icon} alt=""/> 
+                <span id='clima'>{current.condition.text}</span>
             </div>
 
         </div>
@@ -25,3 +32,7 @@ function Card() {
 }
 
 export default Card
+
+Card.propTypes = {
+    data: propTypes.object,
+}.isRequired
