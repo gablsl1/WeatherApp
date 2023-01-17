@@ -1,20 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Card from './components/Card'
+import Api from './services/api'
 
-class App extends Component {
-  render() {
-    return (
-      <div class='container'>
+function App() {
 
-        <form>
-          <input type='text' placeholder='Cidade' />
-          <button type='submit'>Pesquisar</button>
-        </form>
+  const [cidade, setCidade] = useState('')
 
-        <Card />
-      </div>
-    )
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    Api(cidade).then((res) => {
+      console.log(res)
+    }) 
   }
+
+  return (
+    <div class='container'>
+
+      <form onSubmit={ handleSubmit }>
+        <input type='text' placeholder='Cidade' value={cidade} onChange={({ target: {value} }) => setCidade(value)}/>
+        <button type='submit'>Pesquisar</button>
+      </form>
+
+      <Card />
+    </div>
+  )  
 }
 
 export default App;
