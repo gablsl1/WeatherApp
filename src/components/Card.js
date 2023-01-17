@@ -1,5 +1,4 @@
 import React from 'react'
-import propTypes from 'prop-types'
 import './Card.css'
 
 function Card({ data }) {
@@ -32,7 +31,3 @@ function Card({ data }) {
 }
 
 export default Card
-
-Card.propTypes = {
-    data: propTypes.object,
-}.isRequired

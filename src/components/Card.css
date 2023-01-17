@@ -1,6 +1,6 @@
 .card-container {
     background-color: aliceblue;
-    padding: 2rem;
+    padding: 2.5rem;
     margin-top: 2rem;
     border-radius: 2rem;
     box-shadow: .1rem .1em 4rem black;
@@ -38,6 +38,9 @@
 }
 
 .card-container .climaInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     margin-top: .7rem;
 }

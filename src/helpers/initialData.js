@@ -1,13 +1,13 @@
 const initialData = {
         "location": {
-            "name": "-",
-            "region": "-",
-            "country": "-",
+            "name": "Cidade",
+            "region": "Região",
+            "country": "Pais",
         },
         "current": {
             "temp_c": 0,
             "condition": {
-                "text": "-",
+                "text": "Clima",
                 "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
             }
         }
